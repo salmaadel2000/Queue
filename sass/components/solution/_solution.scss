@@ -1,0 +1,192 @@
+.solution {
+    margin-top: 45px;
+    @include flex-container(space-between, center);
+    flex-direction: column;
+    text-align: center;
+
+    .hero {
+        @include flex-container(space-between, center);
+        flex-direction: column;
+        text-align: center;
+
+        .frist {
+            @include flex-container(space-between, center);
+            @include span-style($box-shadow-gray);
+            @include book-style($main-color, $secondary-color);
+            @include frist-span();
+
+            p {
+                @include frist-p()
+            }
+        }
+
+        .text {
+            @include text-styles();
+        }
+
+        .items {
+            @include flex-container(space-around, center);
+            gap: 6px;
+
+            span {
+                @include span-style($box-shadow-gray);
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            .book {
+                @include book-style($main-color, $secondary-color);
+            }
+
+        }
+    }
+
+    .main-img {
+        object-fit: fill;
+        width: 100%;
+        height: 700px;
+    }
+
+    .trust {
+        margin: 60px 0px;
+        background-color: $light-background ;
+        width: 100%;
+
+        h2 {
+            font-size: 30.976px;
+            font-style: normal;
+            font-weight: 600;
+            margin-top: 90px;
+            line-height: 24.781px;
+        }
+
+        p {
+            color: $gray-color;
+            margin: 20px 0px;
+            font-size: 20.651px;
+            font-weight: 300;
+        }
+
+
+        .logo-container {
+            @include flex-container(space-around, center);
+            flex-direction: column;
+             margin-bottom: 30px;
+            .frist,
+            .sec {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                padding: 10px 0;
+            }
+             .frist{
+                width: 100%;
+                margin-bottom: 25px;
+             }
+             .sec{
+                width: 80%;
+                .start{
+                    display: none;
+                }
+             }
+            .logo {
+               width: 16%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .logo img {
+                height: 37px;
+                width: 119px;
+                opacity: 0.7;
+                transition: opacity 0.3s ease;
+            }
+
+            .logo img:hover {
+                opacity: 1;
+            }
+        }
+
+    }
+}
+
+@media (max-width:1023px) {
+    .solution {
+        margin-top: 25px;
+
+        .hero {
+            .text {
+                width: 90%;
+
+                strong {
+                    font-size: 24px;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .items {
+                flex-direction: column;
+                width: 93%;
+
+                span {
+                    margin-top: 10px;
+                    width: 100%;
+                    padding: 12px 30px;
+                    height: 48px;
+                }
+            }
+        }
+
+        .main-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .trust {
+            padding: 10px 0px;
+
+            h2 {
+                font-weight: 700;
+                font-size: 25px;
+            }
+            .logo-container{
+            .frist , .sec{
+                width: 50%;
+                
+            .logo {
+                flex: 1 1 calc(40% - 15px); 
+                img{
+                    height: 28px;
+                }
+            
+            }
+            .end{
+                display: none;
+            }
+            .start{
+                display: block;
+            }
+        }
+        .frist{
+            margin-bottom: 0px;
+        }
+        }
+        }
+    }
+}

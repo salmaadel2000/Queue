@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'mixins';
+@import 'navbar/navbar';
+@import 'components/solution/solution';
+@import 'components/services/services';
+@import 'components/filed/filed';
+@import 'components/features/features';
+@import 'components/price/price';
+@import 'components/testimonial/testimonial';
+@import 'components/case/case';
+@import 'components/faq/faq';
+@import 'components/ready/ready';
+@import 'footer/footer';
+
+body{
+    font-family: "Alexandria", sans-serif;
+}
+
+body[dir="ltr"] {
+    text-align: left;
+    direction: ltr;
+}
+
+body[dir="rtl"] {
+    text-align: right;
+    direction: rtl;
+}

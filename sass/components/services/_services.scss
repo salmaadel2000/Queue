@@ -1,0 +1,248 @@
+.services {
+    .frist-part {
+        @include flex-container(space-between, center);
+        flex-direction: column;
+        text-align: center;
+
+        .frist {
+            @include flex-container(space-between, center);
+            @include span-style($box-shadow-gray);
+            @include book-style($main-color, $secondary-color);
+            @include frist-span();
+            padding: 6px 16px;
+
+            p {
+                @include frist-p()
+            }
+        }
+
+        .text {
+            @include text-styles();
+        }
+
+        .content {
+            background-color: $secondary-color;
+            width: 100%;
+            border-radius: 30px;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 20.892px;
+            font-weight: 400;
+
+            span {
+                background-color: white;
+                border-radius: 30px;
+
+            }
+
+            .item {
+                @include flex-container(center, center);
+                text-align: center;
+                cursor: pointer;
+                color: #556987;
+
+                img {
+                    margin-right: 17px;
+                }
+
+                p {
+                    margin-top: 10px;
+                }
+            }
+
+            .text-diff {
+                color: $dark-blue-color ;
+            }
+        }
+
+        .main {
+            margin: 30px 0;
+            width: 100%;
+
+            .one {
+                text-align: start;
+                .text {
+                    @include text-styles();
+                    margin: 4px 0;
+
+                    h1 {
+                        font-weight: bold;
+                        font-size: 40px;
+                        margin: 15px 0;
+                    }
+
+                    p {
+                        color: $gray-color;
+                        font-weight: 300;
+                    }
+                }
+
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    font-size: 20px;
+                    font-weight: 300;
+                    color: $dark-color;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                a {
+                    color: $main-color;
+                    cursor: pointer;
+                    text-decoration: underline;
+                    font-weight: 500;
+                    font-size: 18px;
+
+                    img {
+                        gap: 1px;
+                        height: 24px;
+                        width: 24px;
+                    }
+                }
+            }
+
+            .two {
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .carousel {
+            display: none;
+        }
+    }
+
+}
+
+@media (max-width: 1023px) {
+    .services {
+        .frist-part {
+            .text {
+                margin: 50px 0;
+
+                strong {
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+
+            .content {
+                display: none;
+            }
+
+            .carousel {
+                margin: 10px 0;
+                text-align: left;
+                width: 100%;
+                display: block;
+
+                .one {
+                    @include flex-container(flex-start, center);
+                    cursor: pointer;
+
+                    img {
+                        margin-right: 17px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+
+                .carousel-control-next {
+                    background-color: $main-color;
+                }
+
+                .carousel-control-prev {
+                    background-color: $gray-color;
+                    right: 37px;
+                    left: auto;
+                }
+
+                .carousel-control-next,
+                .carousel-control-prev {
+                    --size: 1.5rem;
+                    font-size: 10px;
+                    border-radius: 100%;
+                    width: var(--size);
+                    height: var(--size);
+                    transform: translate(-2%, -50%);
+                    top: 50%;
+                    span {
+                        text-align: center;
+                        background-image: none;
+                        font-size: 10px;
+                        padding-top: 8px;
+                    }
+                }
+            }
+
+            .main {
+                .one {
+                    .text {
+                        h1{
+                            font-size: 30px;
+                            text-align: center;
+                            br{
+                                display: none;
+                            }
+                        }
+                        p{
+                            margin-block: 20px;
+                        }
+                    }
+                }
+
+                .two {
+                    order: -1;
+                }
+
+                .one,
+                .two {
+                    width: 100%;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .sec-part {
+            margin-top: 100px;
+
+            .text {
+                strong {
+                    font-size: 30px;
+                }
+            }
+
+            .hero-part {
+                flex-wrap: wrap;
+
+                .sec-section {
+                    width: 100%;
+                    order: 3;
+                }
+
+                .third-section,
+                .frist-section {
+                    width: 50%;
+                    align-items: center;
+
+                }
+            }
+        }
+    }
+}

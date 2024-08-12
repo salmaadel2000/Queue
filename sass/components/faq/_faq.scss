@@ -1,0 +1,138 @@
+.faq {
+  background-color: $light-background;
+  position: relative;
+  padding: 40px 0px;
+
+  .img-star {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    transform: rotate(-180deg);
+  }
+
+  .hero {
+    margin-top: 35px;
+    @include flex-container(space-between, center);
+    flex-direction: column;
+    text-align: center;
+
+    .frist {
+      @include flex-container(space-between, center);
+      @include span-style($box-shadow-gray);
+      @include book-style($main-color, $secondary-color);
+      @include frist-span();
+      padding: 6px 16px;
+
+      p {
+        @include frist-p()
+      }
+    }
+
+    .text {
+      @include text-styles();
+    }
+
+  }
+
+  .faq-container {
+    padding: 20px;
+    border-radius: 10px;
+
+    .accordion-item {
+      border: 1.5px solid $dark-blue-color;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+
+      .accordion-header {
+        background-color: white;
+
+        .accordion-button {
+          font-size: 16px;
+          padding: 20px 23px;
+          color: #000;
+          text-align: left;
+          background-color: white;
+          border: none;
+          outline: none;
+          box-shadow: none;
+          position: relative;
+          font-weight: 500;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          
+          &:after {
+            font-size: 24px;
+            content: '+';
+            color: #000;
+            background-image: none;
+            @include flex-container(center, center);
+          }
+
+          &[aria-expanded="true"] {
+            border-bottom: none;
+            color: #000;
+
+            &:after {
+              content: '-';
+              font-size: 24px;
+            }
+          }
+
+        }
+      }
+
+      .accordion-body {
+        padding: 15px;
+        background-color: #ffffff;
+        border-top: 1px solid #ccd1d5;
+      }
+    }
+
+    .btn {
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 500;
+      color: #000;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+
+  .img-vector {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .img-vector {
+    display: none;
+  }
+
+  .faq {
+    .container{
+    .faq-container {
+    .accordion-item{
+      .accordion-header{
+        .accordion-button{
+          font-size: 14px;
+        }
+      } 
+    } 
+   .btn {
+        width: 100%;
+        padding: 16px 25px
+
+      }
+    }
+  }
+}
+}

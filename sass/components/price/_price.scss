@@ -1,0 +1,280 @@
+
+.price {
+  margin-top: 100px;
+  @include flex-container(space-between, center);
+  width: 100%;
+  background-image: url(../../../img/Group5.png);
+  background-position-y:center ;
+  background-repeat: repeat-x;
+  .hero {
+    margin-top: 35px;
+    @include flex-container(space-between, center);
+    flex-direction: column;
+    text-align: center;
+
+    .frist {
+      @include flex-container(space-between, center);
+      @include span-style($box-shadow-gray);
+      @include book-style($main-color, $secondary-color);
+      @include frist-span();
+      padding: 6px 16px;
+
+      p {
+        @include frist-p()
+      }
+    }
+
+    .text {
+      @include text-styles();
+    }
+
+  }
+
+  .row {
+    margin-top: 50px;
+    width: 100%;
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      border: 1px solid #D4D6D9;
+      margin-bottom: 2rem;
+      height: 763px;
+      .card-body {
+        .per-year {
+          position: relative;
+          @include flex-container(flex-start, flex-end);
+        }
+
+        .start {
+          top: 94px;
+          position: absolute;
+        }
+
+        .frist-header {
+          @include flex-container(space-between, center);
+          span {
+            background-color: white;
+            color: black;
+            border-radius: 36px;
+            height: 30px;
+            padding:5px 8px;
+            p {
+              font-size: 12px;
+               text-transform: uppercase
+              
+            }
+          }
+        }
+
+        .header {
+          @include flex-container(flex-start, center);
+          .dark {
+            border: 1px solid rgba(255, 255, 255, 0.30);
+            width: 55px;
+            height: 55px;
+            background-color: transparent;
+
+            i {
+              color: #f9fafc;
+              font-size: 16px;
+            }
+          }
+
+          span {
+            background-color: #f9fafc;
+            border-radius: 100%;
+            width: 60px;
+            height: 60px;
+            @include flex-container(center, center);
+
+            i {
+              font-size: 30px;
+            }
+          }
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+
+      .card-title {
+        margin-left: 12px;
+        font-weight: 500;
+      }
+
+      hr {
+        width: 98%;
+      }
+
+
+
+      .card-subtitle {
+        text-align: left;
+        margin-top: 65px;
+        font-size: 48px;
+        color: black;
+        font-weight: 500;
+      }
+
+      ul {
+        padding-left: 0;
+        list-style: none;
+        text-align: left;
+        margin-top: 16px;
+
+        li {
+          font-size: 16px;
+          margin-bottom: 0.5rem;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .cord-footer {
+        margin: 30px 0px;
+        background-color: transparent;
+        text-align: center;
+      }
+
+      .btn {
+        background-color: transparent;
+        border: none;
+        border-radius: 100px;
+        width: 317px;
+        height: 48px;
+        padding: 16px 28px;
+        text-transform: capitalize;
+        color: black;
+        border: 1px solid $gray-color;
+        font-weight: 500;
+
+        p {
+          margin-top: -4px;
+        }
+      }
+
+      &.popular {
+        background-color: $primary-color;
+        .card-title,
+        .card-subtitle,
+        .card-text,
+        li:before {
+          color: white;
+        }
+
+        .btn {
+          background-color: white;
+          color: $primary-color;
+
+          &:hover {
+            background-color: darken(white, 20%);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .price {
+    background-image: none;
+    .hero {
+      .text {
+        p{
+          font-size: 16px;
+      }
+        strong {
+          font-size: 24px;
+        }
+
+        img:first-of-type {
+          bottom: 138px;
+          left: -18px;
+        }
+      }
+    }
+
+    .row {
+      @include flex-container(center, center);
+      flex-wrap: wrap;
+
+      .card {
+        .card-subtitle {
+          font-size: 2rem;
+        }
+
+        .card-title {
+          font-size: 1rem;
+        }
+        .cord-footer{
+          a{
+            width: 230px;
+          }
+        }
+      }
+      .col-md-4 {
+        width: 50%;
+
+        .btn {
+          padding: 0.75rem 2.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .price {
+    .row {
+      margin-top: 0px;
+      width: auto;
+      .card {
+        .card-subtitle {
+          font-size: 1.7rem;
+        }
+
+        .card-title {
+          font-size: 1.2rem;
+        }
+
+        .card-body {
+          .frist-header {
+            span {
+              padding: 5px 10px;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+      
+      .col-md-4 {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .price {
+    .row {
+      .card {
+      
+        .card-body {
+          .frist-header{
+            span{
+              display: none;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+

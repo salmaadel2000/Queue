@@ -1,0 +1,51 @@
+@mixin flex-container($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin span-style($box-shadow-gray) {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 8px 25px;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0px 40px 70px 0px rgba(120, 120, 120, 0.11);
+  border: 1px solid #D5DAE1;
+}
+@mixin frist-p{
+  margin: 0px ;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+@mixin frist-span {
+  padding: 10px 14px;
+  height: 26px;
+  gap: 9px;
+}
+
+@mixin book-style($main-color, $secondary-color) {
+  background-color: $main-color;
+  color: $secondary-color;
+}
+
+@mixin text-styles($font-size: 56px, $font-weight-strong: 700, $font-weight-p: 300, $margin: 25px 0) {
+  margin: $margin;
+
+  strong {
+    text-align: center;
+    font-size: $font-size;
+    font-weight: $font-weight-strong;
+  }
+
+  p {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: $font-weight-p;
+    line-height: 30px;
+    margin-top: 16.6px;
+  }
+}
