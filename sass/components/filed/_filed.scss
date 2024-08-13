@@ -68,7 +68,7 @@
 
 @media (max-width: 1023px) {
     .sec-part {
-        margin-top: 100px;
+        margin-top: 50px;
 
         .text {
             strong {
@@ -96,6 +96,12 @@
                 align-items: center;
                 .element{
                     padding: 10px 8px;
+                    h3{
+                        font-size: 15px;
+                    }
+                    p{
+                        font-size: 13px;
+                    }
                 }
 
             }
