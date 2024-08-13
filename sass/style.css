@@ -108,6 +108,14 @@
   .container .navbar .navbar-toggler[aria-expanded=true] span {
     background-image: none;
   }
+  .container .navbar .navbar-toggler[aria-expanded=false] {
+    background-image: url(../../img/menu-01.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .container .navbar .navbar-toggler[aria-expanded=false] span {
+    background-image: none;
+  }
   .container .navbar .navbar-nav {
     gap: 5px;
     font-size: 16px;
@@ -118,6 +126,7 @@
     display: block;
   }
   .container .navbar .container-fluid {
+    margin: 20px 0px;
     position: relative;
     align-items: flex-start;
     flex-direction: column;
@@ -226,6 +235,10 @@
 }
 .solution .hero .text {
   margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 .solution .hero .text strong {
   text-align: center;
@@ -238,6 +251,12 @@
   font-weight: 300;
   line-height: 30px;
   margin-top: 16.6px;
+}
+.solution .hero .text strong {
+  width: 70%;
+}
+.solution .hero .text p {
+  width: 55%;
 }
 .solution .hero .items {
   display: flex;
@@ -342,6 +361,7 @@
   }
   .solution .hero .text strong {
     font-size: 24px;
+    width: 100%;
   }
   .solution .hero .text strong br {
     display: none;
@@ -389,7 +409,7 @@
   .solution .trust .logo-container .frist .logo,
   .solution .trust .logo-container .sec .logo {
     flex: 1 1 calc(40% - 15px);
-    padding-right: 0px;
+    padding-right: auto;
   }
   .solution .trust .logo-container .frist .logo img,
   .solution .trust .logo-container .sec .logo img {
@@ -678,7 +698,7 @@
 }
 .sec-part .text img:first-of-type {
   bottom: 138px;
-  left: -53px;
+  left: -55px;
 }
 .sec-part .text strong {
   text-align: center;
@@ -752,8 +772,8 @@
     font-size: 24px;
   }
   .sec-part .text img:first-of-type {
-    bottom: 138px;
-    left: -18px;
+    bottom: 105px;
+    left: 43px;
   }
   .sec-part .hero-part {
     flex-wrap: wrap;
@@ -782,6 +802,15 @@
   }
 }
 @media (max-width: 880px) {
+  .sec-part .text img {
+    display: none;
+  }
+  .sec-part .text p {
+    font-size: 16px;
+  }
+  .sec-part .text p br {
+    display: none;
+  }
   .sec-part .hero-part .third-section .element,
   .sec-part .hero-part .frist-section .element {
     width: 100%;
@@ -790,9 +819,6 @@
 @media (max-width: 650px) {
   .sec-part .text {
     width: 80%;
-  }
-  .sec-part .text img {
-    display: none;
   }
   .sec-part .hero-part .sec-section img {
     width: 80%;
@@ -1422,6 +1448,9 @@
   .testimonial .text strong {
     font-size: 20px;
   }
+  .testimonial .text strong br {
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   .testimonial .text {
@@ -1660,8 +1689,11 @@
   .img-vector {
     display: none;
   }
+  .faq .container .hero .text strong {
+    font-size: 50px;
+  }
   .faq .container .faq-container .accordion-item .accordion-header .accordion-button {
-    font-size: 14px;
+    font-size: 13px;
   }
   .faq .container .faq-container .btn {
     width: 100%;
@@ -1934,7 +1966,11 @@
     display: none;
   }
   .footer .newsletter-form {
+    font-size: 14px;
     width: 100%;
+  }
+  .footer .newsletter-form .btn-subscribe {
+    font-size: 14px;
   }
 }
 body {

@@ -107,6 +107,15 @@
             background-image: none;
           }
         }
+        &[aria-expanded="false"] {
+          background-image: url(../../img/menu-01.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+
+          span {
+            background-image: none;
+          }
+        }
       }
 
       .navbar-nav {
@@ -121,6 +130,7 @@
       }
 
       .container-fluid {
+        margin: 20px 0px;
         position: relative;
         align-items: flex-start;
         flex-direction: column;

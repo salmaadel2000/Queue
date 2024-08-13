@@ -64,7 +64,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          
+
           &:after {
             font-size: 24px;
             content: '+';
@@ -99,7 +99,8 @@
       border-radius: 50px;
       font-weight: 500;
       color: #000;
-      &:hover{
+
+      &:hover {
         color: white;
       }
     }
@@ -118,21 +119,29 @@
   }
 
   .faq {
-    .container{
-    .faq-container {
-    .accordion-item{
-      .accordion-header{
-        .accordion-button{
-          font-size: 14px;
+    .container {
+      .hero {
+        .text {
+          strong {
+            font-size: 50px;
+          }
         }
-      } 
-    } 
-   .btn {
-        width: 100%;
-        padding: 16px 25px
+      }
 
+      .faq-container {
+        .accordion-item {
+          .accordion-header {
+            .accordion-button {
+              font-size: 13px;
+            }
+          }
+        }
+
+        .btn {
+          width: 100%;
+          padding: 16px 25px
+        }
       }
     }
   }
-}
 }

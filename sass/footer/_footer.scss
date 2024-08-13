@@ -198,7 +198,11 @@
     }
 
     .newsletter-form {
+      font-size: 14px;
       width: 100%;
+      .btn-subscribe{
+        font-size: 14px;
+      }
     }
   }
 }
