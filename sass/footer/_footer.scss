@@ -1,10 +1,10 @@
 .footer {
-  background: $dark-blue-color;
+  background: linear-gradient(106deg, #232340 1.92%, #2F374E 41.78%, #404F65 94.77%);
   color: #fff;
-  padding: 50px 0;
   text-transform: capitalize;
   position: relative;
-
+  padding-top: 45px;
+  
   h2 {
     font-size: 32px;
     font-weight: 500;
@@ -64,14 +64,12 @@
   }
 
   .middle {
-    padding: 20px 0px;
+    padding: 45px 0px ;
   }
 
   .footer-links {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
-
 
     li {
       display: inline;
@@ -115,11 +113,9 @@
     @include flex-container(space-around, normal);
 
     .copyright {
-      width: 80%;
+      width: 100%;
       font-size: 14px;
-      text-align: center;
-      padding-top: 32px;
-
+      margin-top: 40px;
       p {
         width: 71%;
         text-align: right;

@@ -73,28 +73,36 @@
         .logo-container {
             @include flex-container(space-around, center);
             flex-direction: column;
-             margin-bottom: 30px;
+            margin-bottom:100px;
+             margin-top: 60px;
             .frist,
             .sec {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-                gap: 20px;
-                padding: 10px 0;
+                gap: 37px;
+                padding: 17px 0;
             }
-             .frist{
-                width: 100%;
+
+            .frist {
                 margin-bottom: 25px;
-             }
-             .sec{
-                width: 80%;
-                .start{
+                .logo{
+                    padding-inline: 60px;
+                }
+            }
+
+            .sec {
+                .logo{
+                    padding-inline:40px ;
+                }
+                .start {
                     display: none;
                 }
-             }
+            }
+
             .logo {
-               width: 16%;
+                width: 16%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -105,10 +113,12 @@
                 width: 119px;
                 opacity: 0.7;
                 transition: opacity 0.3s ease;
+                cursor: pointer;
             }
 
             .logo img:hover {
                 opacity: 1;
+                
             }
         }
 
@@ -165,28 +175,42 @@
                 font-weight: 700;
                 font-size: 25px;
             }
-            .logo-container{
-            .frist , .sec{
-                width: 50%;
-                
-            .logo {
-                flex: 1 1 calc(40% - 15px); 
-                img{
-                    height: 28px;
+
+            p {
+                color: var(--400, #8896AB);
+                text-align: center;
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            .logo-container {
+               margin-bottom: 0px;
+                .frist,
+                .sec {
+                    width: 83%;
+                    .logo {
+                        flex: 1 1 calc(40% - 15px);
+                        padding-right: 0px;
+                        img {
+                            width: 84.45px;
+                            height: 38.977px;
+                        }
+
+                    }
+
+                    .end {
+                        display: none;
+                    }
+
+                    .start {
+                        display: block;
+                    }
                 }
-            
+
+                .frist {
+                    margin-bottom: 0px;
+                }
             }
-            .end{
-                display: none;
-            }
-            .start{
-                display: block;
-            }
-        }
-        .frist{
-            margin-bottom: 0px;
-        }
-        }
         }
     }
 }
