@@ -368,6 +368,7 @@
   }
   .solution .hero .text p {
     font-size: 16px;
+    width: 100%;
   }
   .solution .hero .text p br {
     display: none;
