@@ -140,7 +140,7 @@
         .hero {
             .text {
                 width: 90%;
-
+                     margin-bottom: 0px;
                 strong {
                     font-size: 24px;
                    width: 100%;
@@ -174,14 +174,17 @@
         .main-img {
             width: 100%;
             height: auto;
+            z-index: -1;
         }
 
         .trust {
             padding: 10px 0px;
-
+             margin-bottom: 20px;
+             margin-top: 0px;
             h2 {
                 font-weight: 700;
                 font-size: 25px;
+                margin-top: 40px;
             }
 
             p {
@@ -193,9 +196,10 @@
 
             .logo-container {
                margin-bottom: 0px;
+               margin-top: 0px;
                 .frist,
                 .sec {
-                    width: 83%;
+                    width: 74%;
                     .logo {
                         flex: 1 1 calc(40% - 15px);
                         padding-right:auto;
@@ -212,6 +216,7 @@
 
                     .start {
                         display: block;
+                        padding: 0px;
                     }
                 }
 

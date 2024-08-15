@@ -1,51 +1,85 @@
 <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary ">
-    <div class="container-fluid  z-1 bg-white">
+  <!-- Main container for the navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <!-- Bootstrap navbar with light background and expanded on large screens -->
+    <div class="container-fluid z-1 bg-white">
+      <!-- Fluid container for navbar content with z-index and white background -->
       <div class="img">
+        <!-- Container for the logo image -->
         <img src="../img/Logo.jpg" alt="Logo">
+        <!-- Logo image with alt text -->
       </div>
       <div class="sec">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"> <a class="nav-link" href="#">Services</a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Case Study</a></li>
-        </ul>
-       <div class="new">
-        <span class="book">
-          <p>Book Demo</p>
-        </span>
-       <span>
-        <p>Contact Sales</p>
-       </span>
-       </div>
-      </div>
-      <div class="btns">
-        <div class="dropdown">
-          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Lng
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <a class="dropdown-item" href="#" onclick="switchDirection('ltr')">en</a>
-            <a class="dropdown-item" href="#" onclick="switchDirection('rtl')">ar</a>
+        <!-- Section containing the navbar toggle button, menu, and additional buttons -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" 
+                aria-label="Toggle navigation" onclick="toggleScroll()">
+          <span class="navbar-toggler-icon"></span>
+          <!-- Button to toggle the navbar on small screens -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Collapsible content for navbar links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Unordered list for navigation links aligned to the left -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+              <!-- Navigation link for "Services" -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+              <!-- Navigation link for "Pricing" -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+              <!-- Navigation link for "Blog" -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Case Study</a>
+              <!-- Navigation link for "Case Study" -->
+            </li>
+          </ul>
+          <div class="new">
+            <!-- Additional section for actions on smaller screens -->
+            <span class="book">
+              <p>Book Demo</p>
+              <!-- "Book Demo" button inside a span -->
+            </span>
+            <span>
+              <p>Contact Sales</p>
+              <!-- "Contact Sales" button inside a span -->
+            </span>
           </div>
         </div>
-   
-        <div class="spans">
-          <span class="login">
-            <p>Partners Login</p>
-          </span>
-          <span class="book">
-            <p>Book Demo</p>
-          </span>
+        <div class="btns">
+          <!-- Container for buttons, including dropdown and action buttons -->
+          <div class="dropdown">
+            <!-- Dropdown menu for language selection -->
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" 
+                    data-bs-toggle="dropdown" aria-expanded="false">
+              Lng
+              <!-- Button displaying "Lng" with a dropdown for language selection -->
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <!-- Dropdown menu options for languages -->
+              <a class="dropdown-item" href="#" onclick="switchDirection('ltr')">en</a>
+              <!-- Option to switch to English (ltr) -->
+              <a class="dropdown-item" href="#" onclick="switchDirection('rtl')">ar</a>
+              <!-- Option to switch to Arabic (rtl) -->
+            </div>
+          </div>
+          <div class="spans">
+            <!-- Container for additional buttons -->
+            <span class="login">
+              <p>Partners Login</p>
+              <!-- "Partners Login" button inside a span -->
+            </span>
+            <span class="book">
+              <p>Book Demo</p>
+              <!-- "Book Demo" button inside a span (duplicate of the one above for larger screens) -->
+            </span>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   </nav>

@@ -95,12 +95,12 @@
         }
 
         p {
-          text-align: left;
+          text-align: start;
         }
       }
 
       .card-title {
-        margin-left: 12px;
+        margin-inline: 12px;
         font-weight: 500;
       }
 
@@ -111,7 +111,7 @@
 
 
       .card-subtitle {
-        text-align: left;
+        text-align: start;
         margin-top: 65px;
         font-size: 48px;
         color: black;
@@ -121,16 +121,13 @@
       ul {
         padding-left: 0;
         list-style: none;
-        text-align: left;
+        text-align: start;
         margin-top: 16px;
-
+        width: 100%;
+        padding-inline-start:0px;
         li {
           font-size: 16px;
           margin-bottom: 0.5rem;
-
-          img {
-            margin-right: 10px;
-          }
         }
       }
 
@@ -184,8 +181,10 @@
 
   .price {
     background-image: none;
+    margin-top: 0px;
     .hero {
       .text {
+        margin-bottom: 0px;
         p{
           font-size: 16px;
       }

@@ -12,7 +12,7 @@
 
         img:first-of-type {
             bottom: 138px;
-            left: -55px;
+            inset: -55px;
         }
 
         @include text-styles();
@@ -72,9 +72,10 @@
 
 @media (max-width: 1023px) {
     .sec-part {
-        margin-top: 50px;
+        margin-top: 20px;
 
         .text {
+            margin: 0px;
             strong {
                 font-size: 24px;
             }

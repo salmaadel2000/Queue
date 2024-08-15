@@ -26,8 +26,9 @@
         border-radius: 100px;
         border: 1.5px solid #D5DAE1;
         color: #000;
-        &:hover{
-          color: white;
+
+        &:hover {
+            color: white;
         }
     }
 }
@@ -42,12 +43,63 @@
     margin: 10px 0;
     width: 100%;
 
-    .case-img {
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        object-fit: cover;
-        height: 240px;
+    .case-main {
+        background-position: center;
+        background-repeat: no-repeat;
         width: 100%;
+        height: 240px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+    }
+
+    .one {
+        background-image: url(../../../img/Image3.png);
+
+        .name {
+            font-size: 16px;
+        }
+    }
+
+    .two {
+        background-image: url(../../../img/Image4.png);
+
+        .name {
+            font-size: 16px;
+        }
+    }
+
+    .three {
+        background-image: url(../../../img/Image5.png);
+    }
+
+    .text-overlay {
+        background-color: red;
+        width: 100%;
+        position: relative;
+
+        p {
+            margin-block-end: 0px;
+            position: absolute;
+            left: 49%;
+        }
+
+        .name {
+            font-size: 13px;
+            font-weight: 500;
+            top: 50%;
+            left: 50%;
+            transform: translate(-3%, -96%);
+        }
+
+        .role {
+            font-size: 10.539px;
+            font-weight: 300;
+            top: 60%;
+            transform: translate(3%, 20%);
+        }
     }
 
     .case-body {
@@ -85,7 +137,9 @@
     }
 }
 
-@media (max-width:800px) {
+
+
+@media (max-width: 1220px) {
     .case {
         @include flex-container(space-between, center);
         flex-direction: column;
@@ -96,14 +150,51 @@
         }
 
         .case-cards {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             width: 100%;
-           .col-md-4{
-            margin-block-end: 35px;
-           }
+
+            .col-md-4 {
+                margin-block-end: 0px;
+                width: 45%;
+
+                .case-item {
+                    .case-main {
+                        background-size: inherit;
+                    }
+
+                    .case-body {
+                        padding: 8px 0px;
+                    }
+
+                    .case-footer {
+                        padding: 0px;
+                    }
+
+                    .case-img {
+                        object-fit: none;
+                    }
+                }
+            }
         }
-        
+
+        .text-start {
+            margin-top: 20px;
+
+            .section-subtitle {
+                margin-bottom: 5px;
+            }
+        }
     }
-    
 }
-        
+
+
+@media (max-width: 800px) {
+    .case {
+        .case-cards {
+            .col-md-4 {
+                width: 100%;
+
+            }
+        }
+    }
+}

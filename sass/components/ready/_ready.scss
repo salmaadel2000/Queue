@@ -69,7 +69,10 @@
 
 @media (max-width:800px) {
     .ready {
+        margin-top: 20px;
         .text {
+            width: 100%;
+            margin: 0px;
             .arrow-div {
                 strong {
                     font-size: 30px;
@@ -79,7 +82,7 @@
 
         .items {
             flex-direction: column;
-            width: 70%;
+            width: 100%;
 
             span {
                 margin-top: 10px;

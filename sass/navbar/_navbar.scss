@@ -1,154 +1,184 @@
 .navbar {
   height: 82px;
-  @include flex-container(center, center);
+  @include flex-container(center, center); // Centering flex items both vertically and horizontally
 
   .img {
-    @include flex-container(start, center);
+    @include flex-container(start, center); // Aligning image at the start horizontally and center vertically
     width: 106px;
     height: 32px;
   }
 
   .btns {
-    @include flex-container(space-around, center);
-    list-style: none;
-    padding: 0;
+    @include flex-container(space-around, center); // Space items evenly with center alignment
+    list-style: none; // Removing bullet points from list items
+    padding: 0; // Removing padding from the list
 
     .dropdown-menu {
-      margin-top: 10px;
+      margin-top: 10px; // Adding space between the button and the dropdown menu
       width: 100%;
-      background-color: white;
+      background-color: white; // Setting the background color of the dropdown menu
     }
 
     .dropdown-item.active,
     .dropdown-item:active {
-      background-color: $shadow-color;
-      color: $dark-blue-color;
+      background-color: $shadow-color; // Setting background color when the dropdown item is active
+      color: $dark-blue-color; // Changing text color on active
     }
 
     .btn {
-      display: inline-flex;
-      padding: 6px 16px;
+      display: inline-flex; // Inline-flex to align items horizontally within the button
+      padding: 6px 16px; // Padding inside the button
       justify-content: center;
       align-items: center;
-      margin-inline-end: 6px;
+      margin-inline-end: 6px; // Adding margin to the end of each button
     }
 
     .btn:focus {
-      box-shadow: 0 0 0 .25rem $shadow-color;
+      box-shadow: 0 0 0 .25rem $shadow-color; // Adding a shadow when the button is focused
     }
 
     .spans {
-      @include flex-container(space-around, center);
-      gap: 6px;
+      @include flex-container(space-around, center); // Aligning spans within the container with spacing
+      gap: 6px; // Gap between the spans
 
       span {
-        @include span-style($box-shadow-gray);
+        @include span-style($box-shadow-gray); // Applying custom styles to the span
 
         p {
-          margin: 0;
+          margin: 0; // Removing margin from paragraphs inside spans
         }
       }
 
       .book {
-        @include book-style($main-color, $secondary-color);
+        @include book-style($main-color, $secondary-color); // Applying custom styles to elements with the class `.book`
       }
     }
   }
 
   .navbar-nav {
-    @include flex-container(start, center);
-    gap: 45px;
+    @include flex-container(start, center); // Aligning nav items at the start horizontally and center vertically
+    gap: 45px; // Gap between the navigation items
     font-size: 16px;
     width: 100%;
-    padding-inline-start: 30px;
+    padding-inline-start: 30px; // Padding at the start of the navbar
 
     .item-toogle {
-      display: none;
+      display: none; // Hiding toggle item by default
     }
 
     .nav-link {
-      text-align: center;
-      margin-block: 5px;
-      padding: 0px;
-      flex-grow: 1;
-      color: $dark-blue-color;
+      text-align: center; // Centering text within nav links
+      margin-block: 5px; // Margin on top and bottom of the nav links
+      padding: 0px; // Removing padding inside the nav link
+      flex-grow: 1; // Allowing nav links to grow and take available space
+      color: $dark-blue-color; // Setting default text color
+      position: relative; // Making the nav link a positioned element
+      transition: color 0.3s ease; // Smooth transition effect on color change
+
+      &:after {
+        content: ''; // Adding a pseudo-element after the nav link
+        position: absolute;
+        left: 0;
+        bottom: -2px; // Positioning underline just below the text
+        width: 100%;
+        height: 1px;
+        background-color: transparent; // Initially making the underline invisible
+        transition: background-color 0.3s ease; // Smooth transition effect on underline visibility
+      }
+
+      &.active, &:focus {
+        color: $main-color; // Changing color when nav link is active or focused
+      }
+
+      &.active:after, &:focus:after {
+        background-color: $main-color; // Making the underline visible when active or focused
+      }
     }
   }
 
   .sec {
     width: 92%;
-    @include flex-container(space-around, center);
+    @include flex-container(space-around, center); // Aligning secondary content with spacing and centering
 
     .collapse {
       .new {
-        display: none;
+        display: none; // Hiding `.new` section by default
       }
     }
   }
 
+  .dropdown {
+    .dropdown-toggle {
+      &::after {
+        margin-inline: .266em; // Adjusting the spacing after the dropdown toggle icon
+      }
+    }
+  }
 }
 
 @media (max-width: 990px) {
   .container {
-    max-width: 100%;
+    max-width: 100%; // Ensuring full width on smaller screens
 
     .navbar {
       .navbar-toggler {
-        order: 3;
-        border: none;
-        background-image: none;
+        order: 3; // Reordering the toggle button
+        border: none; // Removing border from the toggler button
+        background-image: none; // Removing any background image
 
         &[aria-expanded="true"] {
-          background-image: url(../../img/x-close.png);
+          background-image: url(../../img/x-close.png); // Setting close icon when the menu is expanded
           background-position: center;
           background-repeat: no-repeat;
 
           span {
-            background-image: none;
+            background-image: none; // Removing background image from the span inside the toggler
           }
         }
+
         &[aria-expanded="false"] {
-          background-image: url(../../img/menu-01.svg);
+          background-image: url(../../img/menu-01.svg); // Setting menu icon when the menu is collapsed
           background-position: center;
           background-repeat: no-repeat;
 
           span {
-            background-image: none;
+            background-image: none; // Removing background image from the span inside the toggler
           }
         }
       }
 
       .navbar-nav {
-        gap: 5px;
+        gap: 5px; // Reducing gap between nav items on smaller screens
         font-size: 16px;
         width: 100%;
-        padding-inline-start: 0px;
-        .item-toogle {
-          display: block;
-        }
+        padding-inline-start: 0px; // Removing padding on smaller screens
 
+        .item-toogle {
+          display: block; // Showing toggle item on smaller screens
+        }
       }
 
       .container-fluid {
-        margin: 20px 0px;
+        margin: 20px 0px; // Adding vertical margin to the container
         position: relative;
-        align-items: flex-start;
-        flex-direction: column;
+        align-items: flex-start; // Aligning items to the start of the container
+        flex-direction: column; // Stacking items vertically
       }
 
       .sec {
-        justify-content: right;
+        justify-content: flex-start; // Aligning secondary content to the start
 
         ul {
-          width: 30%;
-          gap: 24px;
-          margin-top: 26px;  
+          width: 100%; // Full width for the unordered list
+          gap: 24px; // Adding space between list items
+          margin-top: 26px; // Adding margin to the top of the list
 
           li {
-            width: 100%;
+            width: 100%; // Full width for the list items
 
             .nav-link {
-              text-align: start;
+              text-align: start; // Aligning text to the start of the nav link
+              width: 36%; // Adjusting width of the nav link
             }
           }
         }
@@ -157,48 +187,48 @@
         .navbar-toggler {
           position: absolute;
           top: 0px;
-          right: -6px;
+          inset-inline-end: 2%; // Positioning elements to the right end
         }
 
         .btns {
-          right: 40px;
+          inset-inline-end: 12%; // Adjusting button position on smaller screens
 
           .spans {
-            display: none;
+            display: none; // Hiding spans inside buttons on smaller screens
           }
-          .dropdown-menu{
-            min-width: 5rem;
+
+          .dropdown-menu {
+            min-width: 5rem; // Minimum width for dropdown menu on smaller screens
           }
         }
 
         .collapse {
           .new {
-            display: block;
-            margin-top: 327px;
-            text-align: center;
-            margin-bottom: 10px;
-            width: 100%;
-            @include flex-container(space-around, center);
-            flex-direction: column;
+            display: block; // Showing `.new` section when collapsed
+            margin-top: 327px; // Adjusting top margin of `.new` section
+            text-align: center; // Centering text inside `.new` section
+            margin-bottom: 10px; // Adding bottom margin
+            width: 100%; // Full width for `.new` section
+            @include flex-container(space-around, center); // Aligning content inside `.new` section
+            flex-direction: column; // Stacking content vertically
 
             span {
-              @include span-style($box-shadow-gray);
-              width: 100%;
-              padding: 8px 30px;
-              margin-block-end: 16px;
+              @include span-style($box-shadow-gray); // Applying custom styles to span inside `.new`
+              width: 100%; // Full width for span
+              padding: 8px 30px; // Padding inside span
+              margin-block-end: 16px; // Bottom margin for span
 
               p {
-                margin: 0;
+                margin: 0; // Removing margin from paragraph inside span
               }
             }
 
             .book {
-              @include book-style($main-color, $secondary-color);
+              @include book-style($main-color, $secondary-color); // Applying custom styles to elements with `.book` class inside `.new`
             }
           }
         }
       }
-
     }
   }
 }

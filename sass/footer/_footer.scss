@@ -3,8 +3,8 @@
   color: #fff;
   text-transform: capitalize;
   position: relative;
-  padding-top: 45px;
-  
+  padding-block: 45px;
+
   h2 {
     font-size: 32px;
     font-weight: 500;
@@ -60,11 +60,12 @@
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
+
     }
   }
 
   .middle {
-    padding: 45px 0px ;
+    padding: 45px 0px;
   }
 
   .footer-links {
@@ -110,15 +111,16 @@
   }
 
   .end {
-    @include flex-container(space-around, normal);
+    text-align: center;
+    position: relative;
 
     .copyright {
-      width: 100%;
       font-size: 14px;
       margin-top: 40px;
+      text-align: center;
+
       p {
-        width: 71%;
-        text-align: right;
+        width: 100%;
         font-size: 14px;
 
         a {
@@ -126,6 +128,7 @@
           text-decoration: none;
           padding-inline-start: 24px;
           text-decoration: underline;
+
           &:hover {
             text-decoration: underline;
           }
@@ -134,8 +137,9 @@
     }
 
     .img-end {
-      width: 15%;
-      @include flex-container(center, normal);
+      position: absolute;
+      right: 6%;
+      top: -67%;
     }
   }
 }
@@ -143,6 +147,7 @@
 @media (max-width: 1023px) {
   .footer {
     text-align: center;
+    padding-block: 25px;
 
     h2 {
       font-size: 22px;
@@ -160,34 +165,37 @@
 
     .footer-links {
       height: 250px;
+
+      li {
+        margin-inline-end: 0px;
+      }
     }
 
     .social-links {
-      margin-right: 38px;
+      margin-right: 0px;
 
       li {
-        padding-inline-start: 18px;
-        a{
-          .text-success {
-            color: white !important;
-          }
-        }
+        padding-inline-start: 0px;
       }
     }
 
     .end {
       .copyright {
         width: 100%;
+        margin-top: 0px;
 
         p {
           @include flex-container(space-between, center);
           flex-direction: column;
-          margin-right: 55px;
-            span{
-              order: 3;
-            }
+          margin-right: 0px;
+
+          span {
+            order: 3;
+          }
+
           a {
-            margin-block-end: 32px;
+            margin-block-end: 17px;
+            padding-inline-start: 0px;
           }
         }
       }
@@ -200,9 +208,21 @@
     .newsletter-form {
       font-size: 14px;
       width: 100%;
-      .btn-subscribe{
+
+      .btn-subscribe {
         font-size: 14px;
       }
     }
+
+    .middle {
+      padding: 0px 0px;
+    }
+  }
+}
+
+[dir=rtl] {
+  .btn-subscribe {
+    right: auto !important;
+    left: 7px !important;
   }
 }
