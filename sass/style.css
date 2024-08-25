@@ -113,78 +113,101 @@
 }
 
 @media (max-width: 990px) {
-  .container {
+  .container-nav-main {
     max-width: 100%;
   }
-  .container .navbar .navbar-toggler {
+  .container-nav-main.expanded-nav {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .container-nav-main .navbar {
+    align-items: self-start;
+    height: 100%;
+  }
+  .container-nav-main .navbar .navbar-toggler {
     order: 3;
     border: none;
     background-image: none;
   }
-  .container .navbar .navbar-toggler[aria-expanded=true] {
+  .container-nav-main .navbar .navbar-toggler[aria-expanded=true] {
     background-image: url(../../img/x-close.png);
     background-position: center;
     background-repeat: no-repeat;
   }
-  .container .navbar .navbar-toggler[aria-expanded=true] span {
+  .container-nav-main .navbar .navbar-toggler[aria-expanded=true] span {
     background-image: none;
   }
-  .container .navbar .navbar-toggler[aria-expanded=false] {
+  .container-nav-main .navbar .navbar-toggler[aria-expanded=false] {
     background-image: url(../../img/menu-01.svg);
     background-position: center;
     background-repeat: no-repeat;
   }
-  .container .navbar .navbar-toggler[aria-expanded=false] span {
+  .container-nav-main .navbar .navbar-toggler[aria-expanded=false] span {
     background-image: none;
   }
-  .container .navbar .navbar-nav {
+  .container-nav-main .navbar .navbar-nav {
     gap: 5px;
     font-size: 16px;
     width: 100%;
     padding-inline-start: 0px;
   }
-  .container .navbar .navbar-nav .item-toogle {
+  .container-nav-main .navbar .navbar-nav .item-toogle {
     display: block;
   }
-  .container .navbar .container-fluid {
+  .container-nav-main .navbar .container-fluid {
+    height: 100%;
+    justify-content: flex-start;
     margin: 20px 0px;
     position: relative;
     align-items: flex-start;
     flex-direction: column;
   }
-  .container .navbar .sec {
-    justify-content: flex-start;
+  .container-nav-main .navbar .sec {
+    justify-content: space-between;
+    height: 90%;
+    align-items: flex-start;
   }
-  .container .navbar .sec ul {
+  .container-nav-main .navbar .sec ul {
     width: 100%;
     gap: 24px;
     margin-top: 26px;
   }
-  .container .navbar .sec ul li {
+  .container-nav-main .navbar .sec ul li {
     width: 100%;
   }
-  .container .navbar .sec ul li .nav-link {
+  .container-nav-main .navbar .sec ul li .nav-link {
     text-align: start;
     width: 36%;
   }
-  .container .navbar .sec .btns,
-  .container .navbar .sec .navbar-toggler {
+  .container-nav-main .navbar .sec .btns,
+  .container-nav-main .navbar .sec .navbar-toggler {
     position: absolute;
     top: 0px;
     inset-inline-end: 2%;
   }
-  .container .navbar .sec .btns {
+  .container-nav-main .navbar .sec .btns {
     inset-inline-end: 12%;
   }
-  .container .navbar .sec .btns .spans {
+  .container-nav-main .navbar .sec .btns .spans {
     display: none;
   }
-  .container .navbar .sec .btns .dropdown-menu {
+  .container-nav-main .navbar .sec .btns .dropdown-menu {
     min-width: 5rem;
   }
-  .container .navbar .sec .collapse .new {
+  .container-nav-main .navbar .sec .collapse {
+    height: 100%;
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+  .container-nav-main .navbar .sec .collapse .main-height {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .container-nav-main .navbar .sec .collapse .main-height .new {
     display: block;
-    margin-top: 327px;
     text-align: center;
     margin-bottom: 10px;
     width: 100%;
@@ -193,7 +216,7 @@
     align-items: center;
     flex-direction: column;
   }
-  .container .navbar .sec .collapse .new span {
+  .container-nav-main .navbar .sec .collapse .main-height .new span {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -207,10 +230,10 @@
     padding: 8px 30px;
     margin-block-end: 16px;
   }
-  .container .navbar .sec .collapse .new span p {
+  .container-nav-main .navbar .sec .collapse .main-height .new span p {
     margin: 0;
   }
-  .container .navbar .sec .collapse .new .book {
+  .container-nav-main .navbar .sec .collapse .main-height .new .book {
     background-color: #4ABB82;
     color: #F5F7FA;
   }
@@ -2051,7 +2074,7 @@
 }
 .footer .footer-links li {
   display: inline;
-  margin-inline-end: 30px;
+  margin-inline-end: 17px;
 }
 .footer .footer-links li a {
   color: #fff;
